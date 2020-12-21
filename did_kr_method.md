@@ -1,6 +1,5 @@
 #  KR.identifying DID Method Specification
 
-
 ### Abstract
 
 KR.identifying network is a decentralized network system for Self-Sovereign identity and Verifiable credential.
@@ -193,8 +192,9 @@ The DID owner generates a proof (digital signature) with the private key and ver
 For the security of blockchain nodes, KR.identifying uses signature-based Delegated Proof of Stake consensus algorithms and BFTs (2/3).
 
 # Privacy Considerations
-## TODO
-KR.identifying  blockchain and DID documents do not contain Personally-Identifiable Information (PII). Currently, mobile ID stores only the following data in the blockchain:
+
+KR.identifying  blockchain and DID documents do not contain Personally-Identifiable Information (PII). 
+Currently, KR.identifying stores only the following data in the blockchain:
 • DID documents containing public keys
 • Informations that include vc schema , revocation to verify verifiable credential 
 

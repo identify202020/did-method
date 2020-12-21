@@ -23,10 +23,13 @@ The name string that shall identify this DID method is: kr
 
 ## KR.identifying DID Format
 
+```
 ALPHA and DIGIT used in “kr-identifier" are the definition of Core Rules in [RFC5234].
 
 kr-did = "did:kr:" kr-identifier 
 kr-identifier = ALPHA / DIGIT 
+```
+
 
 example of KR.identifying did
 ```

@@ -28,14 +28,11 @@ ALPHA and DIGIT used in “kr-identifier" are the definition of Core Rules in [R
 kr-did = "did:kr:" kr-identifier 
 kr-identifier = ALPHA / DIGIT 
 
-example of KR.identifying did.
-
+example of KR.identifying did
+```
 did:kr:4EFNaYeA9hDp6F55JAB38EFtNcYEbbM9nwKr
-
 did:kr:gov:4EFNaYeA9hDp6F55JAB38EFtNcYEbbM9nwKr
-
-
-
+```
 
 ### Sample of DID Document
 ```

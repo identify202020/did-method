@@ -44,13 +44,14 @@ did:kr:gov:4EFNaYeA9hDp6F55JAB38EFtNcYEbbM9nwKr
   "publicKey": [
     {
       "id": "did:kr:7V2FnzCykod7aK9eMBEtKEdyfxSwn #keys-1",
-      "type": "EcdsaKoblitzSignature2016",
-      "publicKeyPem": "-----BEGIN PUBLIC KEY...END PUBLIC KEY-----"
+      "type":"Secp256k1VerificationKey2018"  
+      "publicKeyBase58":"24BdVKTgyFiobS8DwFuXvc3TMW7q25WqTS7mGCCtsp9Qt",  
+      
     },
     {
-      "id": "did:kr:7V2FnzCykod7aK9eMBEtKEdyfxSwn#keys-2",
-      "type": "EcdsaKoblitzSignature2016",
-      "publicKeyPem": "-----BEGIN PUBLIC KEY...END PUBLIC KEY-----"
+      "id": "did:kr:7V2FnzCykod7aK9eMBEtKEdyfxSwn#keys-2",  
+      "type":"Secp256k1VerificationKey2018"  
+      "publicKeyBase58":"24BdVKTgyFiobS8DwFuXvc3TMW7q25WqTS7mGCCtsp9Qt",  
     }
   ],
   "authentication": [
@@ -127,13 +128,14 @@ example input data
   "publicKey": [
     {
       "id": "did:kr:7V2FnzCykod7aK9eMBEtKEdyfxSwn #keys-1",
-      "type": "EcdsaKoblitzSignature2016",
-      "publicKeyPem": "-----BEGIN PUBLIC KEY...END PUBLIC KEY-----"
+      "type":"Secp256k1VerificationKey2018"  
+      "publicKeyBase58":"24BdVKTgyFiobS8DwFuXvc3TMW7q25WqTS7mGCCtsp9Qt",  
+      
     },
     {
-      "id": "did:kr:7V2FnzCykod7aK9eMBEtKEdyfxSwn#keys-2",
-      "type": "EcdsaKoblitzSignature2016",
-      "publicKeyPem": "-----BEGIN PUBLIC KEY...END PUBLIC KEY-----"
+      "id": "did:kr:7V2FnzCykod7aK9eMBEtKEdyfxSwn#keys-2",  
+      "type":"Secp256k1VerificationKey2018"  
+      "publicKeyBase58":"24BdVKTgyFiobS8DwFuXvc3TMW7q25WqTS7mGCCtsp9Qt",  
     }
   ],
   "authentication": [

@@ -1,12 +1,12 @@
-#  KR.identifying DID Method Specification
+#  Korea Mobile Identity System DID Method Specification
 
 ### Abstract
 
-KR.identifying network is a decentralized network system for Self-Sovereign Identity and Verifiable Credential.
+Korea Mobile Identity System is a decentralized network system for Self-Sovereign Identity and Verifiable Credential.
 The system is operated by the Korean government(Ministry of the Interior and Safety, Korea)
 It can replace a legacy centralized credential id system with a trusted blockchain node.
 
-In the KR.identifying system, the government employee ID cards will be issued by default
+In the Korea Mobile Identity System , the government employee ID cards will be issued by default
 and various types of identification cards are issued depending on future use. 
 Decentralized Identifiers (DIDs) are used as unique identifiers for identification cards. 
 DIDs can also obtain public key information for secure information exchange between users.
@@ -16,11 +16,11 @@ DIDs can also obtain public key information for secure information exchange betw
 
 This is a draft document and will be updated.
 
-## KR.identifying DID Method Name
+## Korea Mobile Identity System DID Method Name
 
 The name string that identifies this DID method is: kr
 
-## KR.identifying DID Format
+## Korea Mobile Identity System DID Format
 
 ```
 ALPHA and DIGIT used in “kr-identifier" are the definition of Core Rules in [RFC5234].
@@ -30,7 +30,7 @@ kr-identifier = ALPHA / DIGIT
 ```
 
 
-example of KR.identifying did
+example did of Korea Mobile Identity System 
 ```
 did:kr:4EFNaYeA9hDp6F55JAB38EFtNcYEbbM9nwKr
 did:kr:gov:4EFNaYeA9hDp6F55JAB38EFtNcYEbbM9nwKr
@@ -63,7 +63,7 @@ did:kr:gov:4EFNaYeA9hDp6F55JAB38EFtNcYEbbM9nwKr
 ```
 
 ## Operation
-KR.identifying (CRUD) operations are provided in the RESTful API format.
+did (CRUD) operations are provided in the RESTful API format.
 DID documents are generated in the blockchain by smart contract code.
 It checks the authority and performs signature verification within the smart contract.
 To prevent replay attacks, all signatures require a nonce.
@@ -181,20 +181,20 @@ To solve this issue, we store the nonce value that was used and check if the val
 ### Non-repudiation
 The DID owner generates a proof (digital signature) with the private key and verifies the signature with the public key paired with the private key in the blockchain. 
 ### Providing Traffic Security
- KR.identifying provides traffic security using TLS protocols.
+Korea Mobile Identity System provides traffic security using TLS protocols.
  
 ### Storing Data
- KR.identifying stores only the following data in the blockchain:
+Korea Mobile Identity System stores only the following data in the blockchain:
 • DID documents containing public keys
 • Signing value used to verify evidence of a verifiable claim
 
 ### Consensus Algorithm
-For the security of blockchain nodes, KR.identifying uses signature-based Delegated Proof of Stake consensus algorithms and BFTs (2/3).
+For the security of blockchain nodes, Korea Mobile Identity System uses signature-based Delegated Proof of Stake consensus algorithms and BFTs (2/3).
 
 # Privacy Considerations
 
-KR.identifying  blockchain and DID documents do not contain Personally-Identifiable Information (PII).  
-Currently, KR.identifying stores only the following data in the blockchain:
+Korea Mobile Identity System   blockchain and DID documents do not contain Personally-Identifiable Information (PII).  
+Currently, Korea Mobile Identity System stores only the following data in the blockchain:
 • DID documents containing public keys
 • Information that include VC schema and revocation to verify the verifiable credential 
 

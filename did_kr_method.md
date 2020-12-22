@@ -2,11 +2,11 @@
 
 ### Abstract
 
-KR.identifying network is a decentralized network system for Self-Sovereign identity and Verifiable credential.
-The system is operated by a korea government(Ministry of the Interior and Safety, korea)
-It can replace a legacy centralized credential id system that with trusted blockchain node.
+KR.identifying network is a decentralized network system for Self-Sovereign Identity and Verifiable Credential.
+The system is operated by the Korean government(Ministry of the Interior and Safety, Korea)
+It can replace a legacy centralized credential id system with a trusted blockchain node.
 
-In the KR.identifying system , a government employee ID cards will be issued by default
+In the KR.identifying system, the government employee ID cards will be issued by default
 and various types of identification cards are issued depending on future use. 
 Decentralized Identifiers (DIDs) are used as unique identifiers for identification cards. 
 DIDs can also obtain public key information for secure information exchange between users.
@@ -14,11 +14,11 @@ DIDs can also obtain public key information for secure information exchange betw
 
 ## Status of This Document
 
-It is a draft document and will be updated.
+This is a draft document and will be updated.
 
 ## KR.identifying DID Method Name
 
-The name string that shall identify this DID method is: kr
+The name string that identifies this DID method is: kr
 
 ## KR.identifying DID Format
 
@@ -63,16 +63,16 @@ did:kr:gov:4EFNaYeA9hDp6F55JAB38EFtNcYEbbM9nwKr
 ```
 
 ## Operation
-KR.identifying (CRUD) operations are provided in RESTful API format.
-DID documents are generated in the block chain by smart contract code.
-it checks the authority and performs signature verification within the smart contract.
+KR.identifying (CRUD) operations are provided in the RESTful API format.
+DID documents are generated in the blockchain by smart contract code.
+It checks the authority and performs signature verification within the smart contract.
 To prevent replay attacks, all signatures require a nonce.
 
 ### Create
 
 Two types of authoring are supported.
-You can request  a DID generation through simple input data and signature values.
-The other is to create and send the entire DID Doucment directly.
+You can request a DID generation through simple input data and signature values.
+The other is to create and send the entire DID Doucument directly.
 SmartContract returns true if it has not been issued to a block chain and if the signature verification succeeds.
 
 ```
@@ -82,7 +82,7 @@ Output : {result}
 ```
 
 To create a simple type of document, the input value must be as following.
-It returns "true", if successfully created.
+It will return "true" if successfully created.
 
 example input data 
 ```
@@ -105,7 +105,7 @@ output : {result}
 ### Read 
 
 To read did document for some did, the input value must be as following.
-It returns a did docuement for it, if it is found.
+It returns a did document for that, if it is found.
 
 ```
 endpoint : domain/bcapi/v1/did/find
@@ -146,9 +146,9 @@ example input data
 ```
 
 ### Update
-To update did_document ,the input value must be as following.
-The input has a new document with signature including a nonce.
-It returns updated a did docuemnt, if successfully updated.
+To update did_document, the input value must be as following.
+The input has a new document with a signature including a nonce.
+It returns updated a did document, if successfully updated.
 
 ```
 endpoint : domain/bcapi/v1/did/update
@@ -158,11 +158,11 @@ output : did_document
 
 
 ### Delete
-To delete the did_document, the input value must be: The input has a signature containing nonce.
+To delete did_document, the input value must be: The input has a signature containing a nonce.
 After verifying the proof of the delete operation with the public key in the blockchain, 
 did_document with the public key is deleted from the blockchain and is no longer available. 
 And you cannot cancel this operation.
-It returns "true". if successfully delete.
+It returns "true" if successfully delete.
 
 ```
 endpoint : domain/bcapi/v1/did/revoke
@@ -175,9 +175,9 @@ output : result
 # Security Considerations
 
 ### Replay Attacks 
-To prevent a replay attact a did proof has to have nonce value. 
-In decentralized network or smart contract code could not generate reliable random number.(oracle problem)
-To solve this issue , we store the nonce value that was used , and check if the value already used .
+To prevent a replay attack a did proof has to have nonce value. 
+In decentralized network or smart contract code could not generate a reliable random number. (oracle problem)
+To solve this issue, we store the nonce value that was used and check if the value already used .
 ### Non-repudiation
 The DID owner generates a proof (digital signature) with the private key and verifies the signature with the public key paired with the private key in the blockchain. 
 ### Providing Traffic Security
@@ -193,10 +193,10 @@ For the security of blockchain nodes, KR.identifying uses signature-based Delega
 
 # Privacy Considerations
 
-KR.identifying  blockchain and DID documents do not contain Personally-Identifiable Information (PII). 
+KR.identifying  blockchain and DID documents do not contain Personally-Identifiable Information (PII).  
 Currently, KR.identifying stores only the following data in the blockchain:
 • DID documents containing public keys
-• Informations that include vc schema , revocation to verify verifiable credential 
+• Information that include VC schema and revocation to verify the verifiable credential 
 
 # References
 [1]. W3C Decentralized Identifiers (DIDs) v1.0,https://w3c.github.io/did-core/
